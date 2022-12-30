@@ -1,0 +1,22 @@
+body{
+    background-color: gainsboro;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+.blue{
+    background: #0F84EF;
+    padding-left: 1px;
+    padding-right: 1px;
+    
+}
+
+.white{
+    background-color: white;
+    height: 550px;
+    border-radius: 0px 0px 50px 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
