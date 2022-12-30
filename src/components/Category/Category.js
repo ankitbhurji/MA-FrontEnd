@@ -1,8 +1,9 @@
 import style from "./Category.module.css";
 import React, { useState, useEffect } from 'react'
+import CategoriesApi from "../../api/categories";
 import { useParams } from "react-router-dom";
 import {useNavigate} from "react-router-dom"
-
+import axios from "axios";
 
 function Category() {
 
@@ -19,15 +20,16 @@ function Category() {
     
 
     async function addData(){
-        // const CategoryData = await CategoriesApi();
-        // setCategories(CategoryData);
-      const CategoryData = [
-        { Name: "animal" },
-        { Name: "science" },
-        { Name: "nature" },
-        { Name: "art" },
-      ]
-      setCategories(CategoryData)
+        const CategoryData = await CategoriesApi();
+        setCategories(CategoryData);
+      
+        // if(!category){
+        //     const DefaultCategory = categoris[0].Name
+        //     navigate(`/${DefaultCategory}/0`);
+        //     console.log(categoris[0].Name);
+        //     console.log("ok");
+        // }
+        
     }
 
     
