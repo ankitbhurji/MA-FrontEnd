@@ -12,7 +12,7 @@ function Category() {
     const [categoris, setCategories] = useState([]);
 
     function GetCategoryName(categoryName){
-        navigate(`/${categoryName}`);
+        navigate(`/${categoryName}/0`);
     }
     
 
