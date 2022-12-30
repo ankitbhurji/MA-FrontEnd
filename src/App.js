@@ -1,5 +1,6 @@
 import Home from "./Home/Home";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Category from "./components/Category/Category";
 
 function App() {
   return ( 
