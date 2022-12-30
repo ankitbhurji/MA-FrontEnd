@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import style from "./Images.module.css";
-import LikeApi from "../../api/like";
 import GalleryApi from "../../api/discover";
 import { useParams } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
@@ -14,21 +13,7 @@ function Images() {
     const FilterByLike = searchParams.get("filterByLike");
 
     async function AllImages(){
-        // const allData = await GalleryApi(category, FilterByDate, FilterByLike, shuffle);
-        const allData = [
-                { Name: "animal",
-                ImageURL: "www"
-                },
-                { Name: "science",
-                ImageURL: "www"    
-                },
-                { Name: "science",
-                ImageURL: "www"    
-                },
-                { Name: "science",
-                ImageURL: "www"    
-                }
-            ]
+        const allData = await GalleryApi(category, FilterByDate, FilterByLike, shuffle);
         setImages(allData);
         console.log(allData);
         
@@ -39,7 +24,7 @@ function Images() {
 
 
     async function ClickLike(ImageId){
-        await LikeApi(ImageId);
+        // console.log("clicked", ImageId);
         await AllImages();
     }
 
