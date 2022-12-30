@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./Images.module.css";
 import GalleryApi from "../../api/discover";
+import LikeApi from "../../api/like";
 import { useParams } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 
@@ -25,6 +26,7 @@ function Images() {
 
     async function ClickLike(ImageId){
         // console.log("clicked", ImageId);
+        await LikeApi(ImageId);
         await AllImages();
     }
 
