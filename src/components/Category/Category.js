@@ -1,4 +1,5 @@
-import style from "./Category.module.css";
+import styles from './Category.module.css'
+
 import React, { useState, useEffect } from 'react'
 import CategoriesApi from "../../api/categories";
 import { useParams } from "react-router-dom";
@@ -15,9 +16,6 @@ function Category() {
     function GetCategoryName(categoryName){
         navigate(`/${categoryName}/0`);
     }
-    
-
-    
 
     async function addData(){
         const CategoryData = await CategoriesApi();
@@ -32,21 +30,24 @@ function Category() {
         
     }
 
-    
-
     useEffect(()=>{
         addData()
     }, [category])
-    
+
+
     return ( 
-        <div className={style.Category}>
-            {
-               categoris.map((x)=>{
-                return <div className="col-3 btn btn-light" onClick={()=>{GetCategoryName(x.Name)}}>{x.Name}</div>
-               })
-            }
+        <div>
+            <div className={styles.category_container}>
+                {
+                    categoris.map((category)=>{
+                        return(
+                            <div onClick={()=>{GetCategoryName(category.Name)}} className={styles.categories}>{category.Name}</div>
+                        )
+                    })
+                }
+            </div>
         </div>
      );
 }
 
-export default Category; 
+export default Category;

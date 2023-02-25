@@ -1,10 +1,9 @@
-import style from "./Filter.module.css";
+import styles from './Filter.module.css'
 import { useSearchParams } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-
-
 function Filter() {
+
     let {category} = useParams();
     let [searchParams, setSearchParams] = useSearchParams();
 
@@ -14,17 +13,12 @@ function Filter() {
             setSearchParams({filterByDate:name})
         }else{
             setSearchParams({filterByLike:name})
-        }
-        
+        }        
     }
-    
-
-
-
 
     return ( 
-        <div className={style.Filter}>
-           <div className="btn-group dropstart">
+        <div className={styles.filter_container}>
+            <div className="btn-group dropstart">
                 <button type="button" className="btn dropdown-toggle" data-bs-toggle="dropdown">
                     FILTER
                 </button>

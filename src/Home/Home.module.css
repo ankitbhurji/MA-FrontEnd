@@ -1,22 +1,26 @@
-body{
-    background-color: gainsboro;
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    
-}
-.blue{
-    background: #0F84EF;
-    padding-left: 1px;
-    padding-right: 1px;
-    
-}
 
-.white{
+body{
+    background-color: rgb(228, 225, 225);
+}
+.container{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 650px;
+   width: 1400px;
+   margin: 20px auto 0px;
+   /* position: fixed; */
+   padding-right: 40px;
+}
+.sub_container_1{
+    background-color: #0F84EF;
+    padding: 0 4px 0 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90%;
+}
+.sub_container_1_1{
     background-color: white;
-    height: 550px;
-    border-radius: 0px 0px 50px 50px;
-    padding-left: 40px;
-    padding-right: 40px;
+    border-radius: 0 0 40px 40px;
+    padding: 25px;
 }
 

@@ -1,9 +1,10 @@
-import style from "./Shuffle.module.css"
+import styles from './Shuffle.module.css'
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
 function Shuffle() {
+
     const navigate = useNavigate();
     let {category} = useParams();
     
@@ -18,8 +19,10 @@ function Shuffle() {
     };
 
     return ( 
-        <div className={style.button}>
-            <button onClick={ShuffleClick} className="btn btn-warning btn-lg d-grid gap-2 col-3 mx-auto">Shuffle</button>
+        <div>
+            <div className={styles.shffle_container}>
+                    <button onClick={ShuffleClick} className={styles.shuffle_button}>Shuffle</button>
+            </div>
         </div>
      );
 }

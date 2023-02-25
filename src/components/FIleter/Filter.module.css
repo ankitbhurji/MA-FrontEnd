@@ -1,0 +1,8 @@
+.filter_container{
+    color: red;
+    display: flex;
+    justify-content: end;
+}
+.filter_select{
+    width: 150px;
+}
