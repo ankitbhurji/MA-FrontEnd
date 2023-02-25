@@ -17,12 +17,9 @@ function Images() {
     async function AllImages(){
         const allData = await GalleryApi(category, FilterByDate, FilterByLike, shuffle);
         setImages(allData);
-        // console.log(allData);
-        
     }
 
     async function ClickLike(ImageId){
-        // console.log("clicked", ImageId);
         await LikeApi(ImageId);
         await AllImages();
     }
@@ -41,7 +38,13 @@ function Images() {
                         <div className={styles.images}>
                             <img src={image.ImageURL}/>
                             <div className={styles.image_info}>
-                                <div><i style={image.Like==0 ?{color: "#C8C8C8"} : {color:"red"}} onClick={()=>{ClickLike(image._id)}} className= {"fa fa-heart"}> </i></div>
+                                <div>
+                                    <i style={image.Like==0 ?{color: "#C8C8C8"} : {color:"red"}} 
+                                        onClick={()=>{ClickLike(image._id)}} 
+                                        className= {"fa fa-heart"}
+                                    > 
+                                    </i>
+                                </div>
                                 <div>{image.Name}</div>
                             </div>
                         </div>

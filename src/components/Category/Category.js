@@ -1,10 +1,8 @@
 import styles from './Category.module.css'
-
 import React, { useState, useEffect } from 'react'
 import CategoriesApi from "../../api/categories";
 import { useParams } from "react-router-dom";
 import {useNavigate} from "react-router-dom"
-import axios from "axios";
 
 function Category() {
 
@@ -41,7 +39,12 @@ function Category() {
                 {
                     categoris.map((category)=>{
                         return(
-                            <div onClick={()=>{GetCategoryName(category.Name)}} className={styles.categories}>{category.Name}</div>
+                            <div 
+                                onClick={()=>{GetCategoryName(category.Name)}} 
+                                className={styles.categories}
+                            >
+                            {category.Name}
+                            </div>
                         )
                     })
                 }

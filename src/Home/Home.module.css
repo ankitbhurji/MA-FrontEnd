@@ -8,8 +8,7 @@ body{
    grid-template-rows: 650px;
    width: 1400px;
    margin: 20px auto 0px;
-   /* position: fixed; */
-   padding-right: 40px;
+   padding: 0 20px 0 20px;
 }
 .sub_container_1{
     background-color: #0F84EF;

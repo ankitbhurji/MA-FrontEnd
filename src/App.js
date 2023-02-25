@@ -5,11 +5,8 @@ function App() {
   return ( 
     <div>
         <Routes>
-          {/* <Route path="/:category/:shuffle" element={<Home />} /> 
-          <Route path="/" element={<Navigate to="/animal/0" replace />} /> */}
-
           <Route path="/:category/:shuffle" element={<Home1 />} /> 
-          {/* <Route path="/" element={<Navigate to="/animal/0" replace />} /> */}
+          <Route path="/" element={<Navigate to="/animal/0" replace />} />
         </Routes>
     </div>
    );
